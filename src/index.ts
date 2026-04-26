@@ -195,7 +195,9 @@ class MCPClient {
 
 async function main() {
   if (process.argv.length < 3) {
-    console.log("Usage: node index.ts <path_to_server_script>");
+    console.log(
+      "Usage: node index.ts <please_add_dist_index.js relative path>",
+    );
     return;
   }
 
