@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "build": "tsc && chmod 755 dist/index.js",
-    "start": "node --env-file=.env dist/index.js /Users/aditya/Desktop/Work/Adi/personals/cgs/playground/mcp/server/dist/index.js"
+    "start": "node --env-file=.env dist/index.js"
   },
   "devDependencies": {
     "@types/bun": "latest",
