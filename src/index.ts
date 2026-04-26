@@ -34,8 +34,6 @@ class MCPClient {
     serverScriptPath: string,
     serverType: "local" | "remote",
   ) {
-    // ~/dist/index.js
-
     if (serverType === "local") {
       const isJs = serverScriptPath.endsWith(".js");
       const isPy = serverScriptPath.endsWith(".py");
@@ -80,9 +78,7 @@ class MCPClient {
 
       console.log(
         "Connected to server with tools:",
-        this.tools
-          .map((tool) => tool.function?.name)
-          .filter((name): name is string => typeof name === "string"),
+        this.tools.map((tool) => tool.function?.name),
       );
     } catch (e) {
       console.log("Failed to connect to MCP server: ", e);
@@ -95,10 +91,7 @@ class MCPClient {
       {
         role: "system",
         content: `You are a smart chatbot. You have access to following mcp tools:
-          ${this.tools
-            .map((tool) => tool.function?.name)
-            .filter((name): name is string => typeof name === "string")
-            .join("\n")}`,
+          ${this.tools.map((tool) => tool.function?.name).join("\n")}`,
       },
       {
         role: "user",
