@@ -38,8 +38,9 @@ pnpm build
 Before running the client, you need to ensure the server path in the start command points to your server's compiled `dist/index.js`.
 
 The default path is:
+
 ```
-/Users/aditya/Desktop/Work/Adi/personals/cgs/playground/mcp/server/dist/index.js
+/Users/..../dist/index.js
 ```
 
 If your server is in a different location, update the path in `package.json` under the `start` script.
@@ -49,6 +50,7 @@ This is required because relative paths are resolved against the current working
 ### Before You Start
 
 Make sure both repos are built:
+
 1. Build the server: `pnpm build` in the server repo
 2. Build the client: `pnpm build` in the client repo
 
